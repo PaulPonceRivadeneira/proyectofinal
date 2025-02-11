@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unidad Educativa Dr: Paul Ponce Rivadeneira</title>
+    <style>
+        body {
+            font-family: 'Times New Roman', Times, serif, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9ec;
+            color: #333;
+        }
+        header {
+            background-color: #fbfbfbe2;
+            color: #059c00;
+            text-align: center;
+            padding: 1rem 0;
+            position: relative;
+        }
+        header img {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            width: 290px;  
+            height: auto;
+        }
+        nav {
+            background-color: #046434;
+            overflow: hidden;
+        }
+        nav a {
+            float: left;
+            color: white;
+            padding: 14px 20px;
+            text-align: center;
+            text-decoration: none;
+        }
+        nav a:hover {
+            background-color: #033a22;
+        }
+        .section {
+            padding: 20px;
+            margin: 20px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 10px;
+        }
+        .gallery figure {
+            margin: 0;
+            position: relative;
+        }
+        .gallery img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            cursor: pointer;
+        }
+        .gallery figcaption {
+            text-align: center;
+            padding: 10px;
+            background-color: rgba(0, 0, 0, 0.7);
+            color: white;
+            border-radius: 0 0 8px 8px;
+        }
+        .lightbox {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+        }
+        .lightbox img {
+            max-width: 90%;
+            max-height: 90%;
+            border-radius: 8px;
+        }
+        footer {
+            text-align: center;
+            padding: 1rem;
+            background-color: #046434;
+            color: white;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+        h2 {
+            color: #046404;
+        }
+        .himno-text {
+            text-align: center;
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+        .himno-audio {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <img src="imagenes/PPR2.jpg" alt="Logotipo de la institución">
+        <h1>Unidad Educativa Dr. Paul Ponce Rivadeneira</h1>
+        <p>Formando líderes del futuro</p>
+    </header>
+
+    <nav>
+        <a href="informatica.html">Informática de las TIC’S</a>
+        <a href="Mision y Visión.html">Comercialización y Ventas</a>
+        <a href="PlantaDocente.html">Planta Docente</a>
+        <a href="Ini.html">Inicio de Sesión</a>
+    </nav>
+
+    <div id="quienes-somos" class="section">
+        <h2>¿Quiénes somos?</h2>
+        <p>Somos una institución educativa comprometida con la formación integral de nuestros estudiantes. Buscamos que cada alumno desarrolle sus habilidades académicas, sociales y personales para que pueda enfrentar los desafíos del futuro con éxito y responsabilidad. Contamos con la educación básica y Bachillerato con las siguientes especialidades:
+            <ul>
+                <li>Informática de las TIC’S</li>
+                <li>Comercialización y Ventas</li>
+            </ul>
+        </p>
+    </div>
+
+    <div id="vision" class="section">
+        <h2>Nuestra Visión</h2>
+        <p>Ser una institución educativa líder en la formación integral de jóvenes, promoviendo valores de excelencia, responsabilidad y respeto, con un enfoque innovador en la enseñanza y el aprendizaje.</p>
+    </div>
+
+    <div id="historia" class="section">
+        <h2>Nuestra Historia</h2>
+        <p>En el año 1984, la Junta Barrial “Miguel Valverde”, preocupada por el adelanto del sector milagreño, consideró la creación de un centro de educación secundaria, dado que el área está circundada por seis escuelas que educan centenares de niños. Esto justificó la creación de un nuevo plantel educativo.</p>
+        <p>Esta junta estaba constituida por el Lic. Gualberto Arias Bonilla (presidente), Sr. Guido Guzmán Guzmán (vicepresidente), y Sr. Guillermo Silva (secretario). Solicitaron la colaboración de la UNE Cantonal, especialmente de maestros que aspiraban a obtener un cargo. De esta forma, surgió un grupo de profesores entusiastas, entre ellos:</p>
+        <ul>
+            <li>Dr. Kléber Chiluiza Núñez, Médico Profesor</li>
+            <li>Lic. Elsa Plaza Alarcón, Profesor – Psicóloga</li>
+            <li>Prof. Jorge Pacheco Mendoza, Profesor de Ciencias</li>
+            <li>Prof. Nelly Rivera Espinoza, Profesora de Inglés</li>
+            <li>Prof. Luz María Monserrate, Profesora de Castellano</li>
+        </ul>
+        <p>Este grupo comenzó con arduas labores para organizar el nuevo plantel y conseguir el alumnado. La junta barrial presentó a la Municipalidad de Milagro, representada por el Alcalde Sr. Humberto Centanaro, la solicitud para que se tramite la creación y legalización del nuevo colegio. Esta solicitud fue aceptada y, mediante el Acuerdo Nº 9064 del 11 de septiembre de 1985, el Ministerio de Educación creó el plantel bajo el nombre de “17 de septiembre”, que operaría en jornada vespertina.</p>
+        <p>El ciclo escolar comenzó en 1986 con 32 alumnos, y en junio de ese año, la Sra. Lic. Raquel Cano Miranda fue nombrada rectora. Durante los primeros años, el plantel sufrió de varias carencias, como aulas inadecuadas y falta de servicios higiénicos. Gracias a múltiples gestiones, la institución creció y se estableció en nuevos terrenos, como el de la Escuela Fiscal “Miguel Valverde”.</p>
+        <p>En 1987, debido a la confusión con el nombre “17 de Septiembre”, se solicitó el cambio de nombre a “Dr. Paul Ponce Rivadeneira” en homenaje al educador Paul Ponce. En 1988, se inauguraron 4 aulas construidas con el apoyo de la municipalidad. A partir de 1997, el colegio expandió su oferta educativa al ciclo diversificado en especialización informática, y en 1999 se incorporó la primera promoción de bachilleres en ciencias, especialización informática.</p>
+        <p>Con los años, la institución siguió creciendo tanto en infraestructura como en calidad educativa. En el 2004, el Dr. Santiago Villa Solórzano fue nombrado rector titular de la institución y continuó gestionando mejoras significativas para el bienestar del plantel.</p>
+        <p>A lo largo de sus 32 años de trayectoria, la Unidad Educativa Dr. Paul Ponce Rivadeneira ha sido testigo de numerosos avances, consolidándose como una de las principales instituciones educativas del cantón Milagro.</p>
+    </div>
+    <div id="himno" class="section">
+        <h2>El Himno de la institución</h2>
+        <div class="himno-text">
+            <div id="himno" class="section">
+                <div class="himno-text">
+                    <h3>HIMNO AL COLEGIO</h3>
+                    <p><strong>“DR. PAÚL PONCE RIVADENEIRA”</strong></p>
+                    <p><strong>Coro:</strong><br>
+                        Juventud poncina adelante<br>
+                        Que iluminas la Patria y el saber<br>
+                        (Que en Milagro está escrito en la gloria<br>
+                        Paúl Ponce ilustre educador) BIS…<br><br>
+        
+                        <strong>I</strong><br>
+                        De tus aulas cual templo gigante<br>
+                        De sapiencia, ciencia y virtud.<br>
+                        De enseñanza llenaron nuestras mentes<br>
+                        Al futuro sin tregua triunfar.<br><br>
+        
+                        <strong>II</strong><br>
+                        Al sendero del mañana os guiaste<br>
+                        Del poncino que en tu seno cobijaste<br>
+                        Impregnado cual reflejo del maestro<br>
+                        Luz y guía de nuestra formación<br><br>
+        
+                        <strong>III</strong><br>
+                        De esta opima tierra Milagreña<br>
+                        Del Chirijo heredaste sus campos<br>
+                        Y en él, juventud germinaste<br>
+                        A ser grande, humilde y de honor<br>
+                        (BIS CORO)<br><br>
+        
+                        Letra y música: Prof. Carlos Parra Correa
+                    </p>
+                </div>
+                <div class="himno-audio">
+                    <audio controls>
+                        <source src="sonido/HIMNO DEL COLEGIO.aac" type="audio/mp3">
+                    </audio>
+                </div>
+            </div>
+    </div>
+
+    <div id="galeria" class="section">
+        <h2>Galería de Fotos</h2>
+        <div class="gallery">
+            <figure>
+                <img src="imagenes/logo ppr.jpeg" alt="Logo de la institución" onclick="openLightbox(this)">
+                <figcaption>Logo de la Unidad Educativa Dr: Paul Ponce Rivadeneira.</figcaption>
+            </figure> 
+
+            <figure>
+                <img src="imagenes/ofertas.jpg" alt="Ofertas academicas" onclick="openLightbox(this)">
+                <figcaption>Ofertas académicas</figcaption>
+            </figure>
+
+            <figure>
+                <img src="imagenes/juramento a la bandera 2023.jpg" alt="Juramento a la bandera 2023" onclick="openLightbox(this)">
+                <figcaption>Ceremonia de juramento a la bandera en 2023.</figcaption>
+            </figure>
+
+            <figure>
+                <img src="imagenes/patio ç.jpg" alt="Cancha de la institución" onclick="openLightbox(this)">
+                <figcaption>Vista panorámica del patio de la institución.</figcaption>
+            </figure>
+            
+            <figure>
+                <img src="imagenes/licenciados.jpeg" alt="Maestros de la institución" onclick="openLightbox(this)">
+                <figcaption>Maestros de la institución.</figcaption>
+            </figure>
+
+            <figure>
+                <img src="imagenes/consejo estudiante.jpg" alt="Consejo estudiantil 2024-2025" onclick="openLightbox(this)">
+                <figcaption>Consejo estudiantil.</figcaption>
+            </figure>
+            <figure>
+                <img src="imagenes/franco.jpg" alt="Señorita aniversario 2024 - Stefany franco" onclick="openLightbox(this)">
+                <figcaption>Señorita aniversario 2024 - Stefany franco.</figcaption>
+            </figure>
+           <figure>
+                <img src="imagenes/ventas 1A.jpg" alt="Estudiantes ventas 1"A" onclick="openLightbox(this)">
+                <figcaption>Estudiantes ventas 1"A.</figcaption>
+            </figure >
+            <figure>
+                <img src="imagenes/informatica1B.jpg" alt="Estudiantes informática 1 "B" onclick="openLightbox(this)">
+                <figcaption>Estudiantes informática 1"B".</figcaption>
+            </figure >
+            <figure>
+                <img src="imagenes/informatica 1C.jpg" alt="Estudiantes informática 1 "C" onclick="openLightbox(this)">
+                <figcaption>Estudiantes informática 1"C".</figcaption>
+            </figure >
+            <figure>
+                <img src="imagenes/2A ventas.jpg" alt="Estudiantes Ventas 2 "A" onclick="openLightbox(this)">
+                <figcaption>Estudiantes Ventas 2"A".</figcaption>
+            </figure >
+            <figure>
+                <img src="imagenes/2B informatica.jpg"Estudiantes Informatica 2 "B" onclick="openLightbox(this)">
+                <figcaption>Estudiantes Informatica 2"B"</figcaption>
+            </figure >
+            <figure>
+                <img src="imagenes/ventas 3A.jpg"Estudiantes Ventas 3 "A" onclick="openLightbox(this)">
+                <figcaption>Estudiantes Ventas 3"A"</figcaption>
+            </figure >
+            <figure>
+                <img src="imagenes/Tercero B.jpg"Estudiantes Informatica 3 "B" onclick="openLightbox(this)">
+                <figcaption>Estudiantes Informatica 3"B"</figcaption>
+            </figure >
+            <figure>
+                <img src="imagenes/tercero C.jpg"Estudiantes Informatica 3 "C" onclick="openLightbox(this)">
+                <figcaption>Estudiantes Informatica 3"C"</figcaption>
+            </figure >
+        </div>
+    </div>
+
+    <div id="lightbox" class="lightbox" onclick="closeLightbox()">
+        <img id="lightbox-img" src="" alt="Imagen ampliada">
+    </div>
+    
+    <script>
+        function openLightbox(image) {
+            const lightbox = document.getElementById('lightbox');
+            const lightboxImg = document.getElementById('lightbox-img');
+            lightboxImg.src = image.src;
+            lightbox.style.display = 'flex';
+        }
+
+        function closeLightbox() {
+            const lightbox = document.getElementById('lightbox');
+            lightbox.style.display = 'none';
+        }
+    </script>
+
+</body>
+</html>

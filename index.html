@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ESTRUCTURA MODULAR DEL CURRÍCULO</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: white;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        header {
+            background-color:  #264727;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            width: 100%;
+            position: relative;
+        }
+        h1 {
+            margin: 0;
+        }
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-top: 20px;
+        }
+        .card {
+            background-color: white;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            margin: 10px;
+            padding: 20px;
+            width: 250px;
+            text-align: center;
+            transition: transform 0.2s;
+        }
+        .card:hover {
+            transform: scale(1.05);
+            border-color: #4CAF50;
+        }
+        .card h3 {
+            color: #4CAF50;
+        }
+        .card a {
+            text-decoration: none;
+            color: #4CAF50;
+        }
+        .back-button {
+            position: absolute;
+            top: 15px;
+            left: 40px;
+            background-color: #85c68e;
+            color: white;
+            padding: 5px 10px;
+            border: none;
+            border-radius: 20px;
+            font-size: 12px;
+            cursor: pointer;
+            text-transform: uppercase;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            transition: background-color 0.3s, transform 0.2s;
+            opacity: 0.8;
+        }
+        .back-button:hover {
+            background-color: #76b57e;
+            transform: scale(1.1);
+            opacity: 1;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <button class="back-button" onclick="window.location.href='informatica.html'">Regresar</button>
+        <h1>Módulos asociados a las Unidades de Competencia</h1>
+    </header>
+    <div class="container">
+        <div class="card">
+            <h3><a href="progra.html">Programación y Base de Datos</a></h3>
+            <p>Desarrollo de aplicaciones y manejo eficiente de información.</p>
+        </div>
+        <div class="card">
+            <h3><a href="ddw.html">Diseño y Desarrollo Web</a></h3>
+            <p>Creación de sitios web atractivos y funcionales.</p>
+        </div>
+        <div class="card">
+            <h3><a href="sistema.html">Sistemas Operativos y Redes</a></h3>
+            <p>Instalación, configuración y manejo de sistemas operativos.</p>
+        </div>
+        <div class="card">
+            <h3><a href="ofimatica.html">Aplicaciones Ofimáticas locales y en línea</a></h3>
+            <p>Uso de herramientas para tareas administrativas y de oficina.</p>
+        </div>
+        <div class="card">
+            <h3><a href="soportetecnico.html">Soporte Técnico</a></h3>
+            <p>Mantenimiento y reparación de equipos informáticos.</p>
+        </div>
+        <div class="card">
+            <h3><a href="fol.html">Formación y Orientación Laboral</a></h3>
+            <p>Preparación para el ámbito laboral y desarrollo profesional.</p>
+        </div>
+        <div class="card">
+            <h3><a href="cargaHoraria.html">Carga Horaria</a></h3>
+            <p>Muestra el número de horas de cada materia.</p>
+        </div>
+    </div>
+</body>
+</html>

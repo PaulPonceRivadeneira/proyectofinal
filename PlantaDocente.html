@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+   <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Planta Docente</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Belleza&family=Dancing+Script:wght@400..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css">
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <style>
+        html, body {
+            height: 100%;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #e1ebe2;
+            display: flex;
+            flex-direction:column;
+        }
+       .container { 
+            flex:1 ;
+            padding: 20px;
+            background-color: forestgreen;
+
+        }
+        header {
+            background-color: #086b15cb;
+            color: white;
+            padding: 15px;
+            text-align: center;
+        }
+        
+        .section-description {
+        font-family: "Dancing Script", cursive;
+        font-size: 2rem; 
+        color: #555; 
+        margin-top: 10px; 
+        margin-bottom: 20px; 
+        line-height: 1.6;
+        background-color: #ffffff;
+        padding: 15px; 
+        border-radius: 8px; 
+    }
+    .section-description {
+        opacity: 0;
+        transform: translateX(-100%);
+        animation: slideIn 1s forwards;
+    }
+
+    @keyframes slideIn {
+        to {
+            opacity: 1;
+            transform: translateX(0);
+        }
+    }
+    .section-title {
+        font-family: 'Poppins', sans-serif;  
+        font-size: 2rem; 
+        font-weight: bold;  
+        color: #ffffff;  
+        text-align: center;  
+        margin-bottom: 20px;  
+    }
+    .section-title {
+        opacity: 0;
+        transform: translateX(-100%);
+        animation: slideIn 1s forwards;
+    }
+
+    @keyframes slideIn {
+        to {
+            opacity: 1;
+            transform: translateX(0);
+        }
+    }
+    .authorities-title {
+        font-family: 'Belleza', sans-serif; 
+        font-size: 2rem; 
+        font-weight: bold; 
+        color: #333; 
+        text-align: center; 
+        margin-bottom: 20px; 
+    }
+
+    .authorities-title{
+        opacity: 0;
+        transform: translateX(-100%);
+        animation: slideIn 1s forwards;
+    }
+
+    @keyframes slideIn {
+        to {
+            opacity: 1;
+            transform: translateX(0);
+        }
+    }
+      .container{
+            padding: 20px;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        .teacher-card {
+            border: 1px solid #3de45967;
+            border-radius: 8px;
+            padding: 15px;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+            background-color: #fff;
+            gap: 20px;
+    }
+        .teacher-card img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            margin-right: 20px;
+            gap: 20px;
+        }
+
+        footer {
+            background-color: #000000;
+            color: white;
+            text-align: center;
+            padding: 15px;
+        }
+        
+        .back-button {
+            position: fixed;
+            top: 15px;
+            left: 15px;
+            background-color: #85c68e;
+            color: white;
+            padding: 5px 12px;
+            border: none;
+            border-radius: 12px;
+            font-size: 10px;
+            cursor: pointer;
+            text-transform: uppercase;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            transition: background-color 0.3s, transform 0.2s;
+            opacity: 0.8;
+        }
+
+        .back-button:hover {
+            background-color: #76b57e;
+            transform: scale(1.1);
+            opacity: 1;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <button class="back-button" onclick="window.location.href='paginacolegio.html'">Regresar</button>
+        <h1 class="section-title"> Nuestra Planta Docente</h1>
+    </header>
+        <center><p class="section-description">
+        Conoce a los profesionales que lideran nuestra educación.</p></center>
+    </body>   
+    <center><h2 class="authorities-title">Autoridades</h2></center>
+    <div class="teacher-card"data-aos="fade-up">
+        <img src="Imagenes/Nicolás.jpeg" alt="Rector de la insitución">
+        <div>
+            <h3><?= $docente['Nicolas']; ?></h3>
+            <p><strong>Cargo:</strong> Rector</p>
+            <p><strong>Nombre:</strong> Nicolás Benito Guaranda Macias</p>
+            <p><strong>Título:</strong> Diplomado en Educación<?= $docente['Diplomado']; ?></p>
+            <p><strong>Carga Horaria:</strong> Programación <?= $docente['Programación']; ?></p>
+            </div>
+    </div>
+    <div class="teacher-card" data-aos="fade-up">
+        <img src="Imagenes/Daniel.jpg" alt="Inspector de la insitución">
+        <div>
+            <h3><?= $docente['Daniel']; ?></h3>
+            <p><strong>Cargo:</strong> Inspector</p>
+            <p><strong>Nombre:</strong>Ing. Daniel Alfonso Elizondo Remache</p>
+            <p><strong>Título:</strong> Ingeniero en Sistemas<?= $docente['Ingeniero']; ?></p>
+            <p><strong>Carga Horaria:</strong> Programación y base de datos <?= $docente['Programación']; ?></p>
+        </div>
+    </div>
+    <div class="teacher-card" data-aos="fade-up">
+        <img src="Imagenes/Jison.jpg" alt="Inspector de la Jornada Vespertina">
+            <div>
+            <h3><?= $docente[Jinson']; ?></h3>
+            <p><strong>Cargo:</strong> Inspector de la Jornada Vespertina</p>
+            <p><strong>Nombre:</strong> Licdo. Jinson Israel Muñoz Freire </p>
+            <p><strong>Título:</strong> Licenciado en Ciencias de la Educación<?= $docente['Licenciado']; ?></p>
+            <p><strong>Carga Horaria:</strong> Ciencias Naturales <?= $docente['Ciencias Naturales']; ?></p> 
+            </div>
+          </div> 
+    <center><h2 class="authorities-title">Docentes Generales</h2></center>
+    <div class="teacher-card"data-aos="fade-up">
+        <img src="Imagenes/Joselito.jpeg" alt="Docente de Física ">
+        <div>
+           <h3><?= $docente['Joselito']; ?></h3>
+            <p><strong>Nombre:</strong> Licdo.Joselito Efraín Paredes Eugenio</p>
+            <p><strong>Título:</strong> Especialista en Gestión Educativa<?= $docente['Especialista']; ?></p>
+            <p><strong>Carga Horaria:</strong> Física-Dibujo Técnico Aplicado- Aplicaciones Informáticas<?= $docente['Física']; ?></p>
+            </div>
+        </div>
+        <div class="teacher-card" data-aos="fade-up">
+            <img src="imagenes/Margarita.jpg" alt="Docente de Matemáticas ">
+            <div>
+               <h3><?= $docente['Margarita']; ?></h3>
+                <p><strong>Nombre:</strong> Licda.Narcisa Margarita Macias </p>
+                <p><strong>Título:</strong> Licenciada en educación<?= $docente['Licenciada']; ?></p>
+                <p><strong>Carga Horaria:</strong> Matemáticas<?= $docente['Matemática']; ?></p>
+                </div>
+            </div>
+            <div class="teacher-card" data-aos="fade-up">
+                <img src="Imagenes/Gladis.jpeg" alt="Docente de Lenguaje ">
+                <div>
+                   <h3><?= $docente['Gladis']; ?></h3>
+                    <p><strong>Nombre:</strong> Licda.Gladis Grisel Espinoza Espinoza Valdozpino </p>
+                    <p><strong>Título:</strong> Magister en Diseño de Curriculum y Competencia<?= $docente['Magister']; ?></p>
+                    <p><strong>Carga Horaria:</strong> Lengua y Literatura <?= $docente['Matemática']; ?></p>
+                    </div>
+                </div>
+                <div class="teacher-card" data-aos="fade-up">
+                    <img src="Imagenes/Anita.jpg" alt="Docente de Filosofía ">
+                    <div>
+                       <h3><?= $docente['Ana']; ?></h3>
+                        <p><strong>Nombre:</strong> Licda.Ana Noblecilla Olaya </p>
+                        <p><strong>Título:</strong> Doctora en Educación <?= $docente['Doctora']; ?></p>
+                        <p><strong>Carga Horaria:</strong> Filosofía-Educación para la ciudadanía <?= $docente['Filosofía']; ?></p>
+                        </div>
+                    </div>
+                    <div class="teacher-card" data-aos="fade-up">
+                        <img src="Imagenes/Jeny.jpg" alt="Docente de Historia  ">
+                        <div>
+                           <h3><?= $docente['Jeny']; ?></h3>
+                            <p><strong>Nombre:</strong> Ing. Jeny Elisabeth Cardenas Benavides </p>
+                            <p><strong>Título:</strong> Ingeniera Agrónoma <?= $docente['Ingeniera']; ?></p>
+                            <p><strong>Carga Horaria:</strong> Historia-Aplicaciones Ofitmáticas <?= $docente['Matemática']; ?></p>
+                            </div>
+                     </div>
+                    <div class="teacher-card" data-aos="fade-up">
+                         <img src="Imagenes/Betty.jpeg" alt="Docente de Quimica ">
+                         <div>
+                            <h3><?= $docente['Margarita']; ?></h3>
+                            <p><strong>Nombre:</strong> Licda.Betty Yolanda Vizuete Mejia </p>
+                            <p><strong>Título:</strong> Master en Gerencia educativa <?= $docente['Master']; ?></p>
+                            <p><strong>Carga Horaria:</strong> Química-Biología <?= $docente['Quimica']; ?></p>
+                            </div>
+                        </div>
+                        <div class="teacher-card" data-aos="fade-up">
+                            <img src="Imagenes/Gina.jpg" alt="Docente de Biologia">
+                            <div>
+                                <h3><?= $docente['Gina']; ?></h3>
+                                <p><strong>Nombre:</strong> Licda.Gina Magali Viejó Galarza </p>
+                                <p><strong>Título:</strong> Magister en Gerencia educativa<?= $docente['Magister']; ?></p>
+                                <p><strong>Carga Horaria:</strong> Química-Biología-F.O.L- E.C.A<?= $docente['Matemática']; ?></p>
+                                </div>
+                             </div>
+                            <div class="teacher-card" data-aos="fade-up">
+                                <img src="Imagenes/Raul.jpeg" alt="Docente de Inglés ">
+                                <div>
+                                <h3><?= $docente['Raul']; ?></h3>
+                                <p><strong>Nombre:</strong> Licdo.Raul Albert Arreaga Suárez  </p>
+                                <p><strong>Título:</strong> Master en Formación de Docente <?= $docente['Master']; ?></p>
+                                <p><strong>Carga Horaria:</strong> Inglés<?= $docente['Inglés']; ?></p>
+                             </div>
+                            </div>
+                            <div class="teacher-card" data-aos="fade-up">
+                                <img src="Imagenes/Stephanie.jpg" alt="Docente de Emprendimiento ">
+                                <div>
+                                <h3><?= $docente['Stephanie']; ?></h3>
+                                <p><strong>Nombre:</strong> Licda.Stephanie Jazmín Ronquillo Celi  </p>
+                                <p><strong>Título:</strong> Master en Educación Básica <?= $docente['Master']; ?></p>
+                                <p><strong>Carga Horaria:</strong> Emprendimiento y Gestión<?= $docente['Emprendimiento']; ?></p>
+                                </div>
+                            </div>
+                                <center><h2 class="authorities-title">Docentes de Especialidad </h2></center>
+                              <div class="teacher-card" data-aos="fade-up">
+                            <img src="Imagenes/Santiago.jpg" alt="Docente de Soporte Tecnico ">
+                                <div>
+                                <h3><?= $docente['Santiago']; ?></h3>
+                                <p><strong>Nombre:</strong> Licdo.Santiago Alejandro Baquerizo Gamboa</p>
+                                <p><strong>Título:</strong> Master en Tecnología educativa<?= $docente['Master']; ?></p>
+                                <p><strong>Carga Horaria:</strong> Soporte Técnico-Diseño y Desarrollo Web<?= $docente['Soporte Técnico']; ?></p>
+                                </div>
+                              </div>
+                            <div class="teacher-card" data-aos="fade-up">
+                            <img src="Imagenes/Martha.jpg" alt="Docente de Sistemas Operativos ">
+                                <div>
+                                <h3><?= $docente['Santiago']; ?></h3>
+                                <p><strong>Nombre:</strong> Licda. Martha Lili Tandazo Albán</p>
+                                <p><strong>Título:</strong> Magister en Gerencia educativa<?= $docente['Magister']; ?></p>
+                                <p><strong>Carga Horaria:</strong> Programación- Sistemas Operativo<?= $docente['Soporte Técnico']; ?></p>
+                                </div> 
+                            </div>
+                            <div class="teacher-card" data-aos="fade-up">
+                            <img src="imagenes/Agustin.jpg" alt="Docente de Aplicaciones Ofitmáticas ">
+                                <div>
+                                <h3><?= $docente['Agustin']; ?></h3>
+                                <p><strong>Nombre:</strong> Licdo. George Agustin Bravo Quispe</p>
+                                <p><strong>Título:</strong> Master en Educación<?= $docente['Master']; ?></p>
+                                <p><strong>Carga Horaria:</strong> Aplicaciones Ofitmáticas-Educación Física <?= $docente['Aplicaciones Ofitmáticas']; ?></p>
+                                </div> 
+                            </div>  
+                            <div class="teacher-card" data-aos="fade-up">
+                            <img src= "Imagenes/Angie.jpeg" alt="Docente de Animación en el punto de venta">
+                                <div>
+                                <h3><?= $docente['Angie']; ?></h3>
+                                <p><strong>Nombre:</strong> Licda. Angie Belén Palacios Loja </p>
+                                <p><strong>Título:</strong> Magister en Educación Básica <?= $docente['Magister']; ?></p>
+                                <p><strong>Carga Horaria:</strong> Animación en el punto de venta- Operaciones de almacenante- Operaciones de venta <?= $docente['Soporte Técnico']; ?></p>
+                                </div> 
+                            </div>
+                            <center><h2 class="authorities-title">Docentes de la Jornada Vespertina  </h2></center>
+                            <div class="teacher-card" data-aos="fade-up">
+                          <img src="imagenes/Sandy.jpg" alt="Docente de Educación Físiaca">
+                              <div>
+                              <h3><?= $docente['Sandy']; ?></h3>
+                              <p><strong>Nombre:</strong> Licda. Sandy Yohana Dávila Navarro</p>
+                              <p><strong>Título:</strong> Máster en Tecnología educativa<?= $docente['Máster']; ?></p>
+                              <p><strong>Carga Horaria:</strong>Educación Física-Matemáticas <?= $docente['Educación Física']; ?></p> 
+                              </div>
+                            </div>  
+                            <div class="teacher-card" data-aos="fade-up">
+                             <img src="imagenes/Monica.jpg"Docente de Matemáticas">
+                                 <div>
+                                <h3><?= $docente['Sandra']; ?></h3>
+                                <p><strong>Nombre:</strong> Licda. Sandra Mónica Morán Flores</p>
+                                <p><strong>Título:</strong> Magíster en Pedagogía <?= $docente['Magister']; ?></p>
+                                <p><strong>Carga Horaria:</strong>Matemáticas <?= $docente['Matemáticas']; ?></p> 
+                                 </div>
+                            </div> 
+                            <div class="teacher-card" data-aos="fade-up">
+                            <img src="Imagenes/Lupe.jpg" alt="Docente de Estudios Sociales">
+                                <div>
+                                <h3><?= $docente['Lupe']; ?></h3>
+                                <p><strong>Nombre:</strong> Licda. Lupe Ester Dávila Reacio</p>
+                                <p><strong>Título:</strong> Magíster en Pedagía Técnica Profesional <?= $docente['Magister']; ?></p>
+                                <p><strong>Carga Horaria:</strong>Estudios Sociales <?= $docente['Estudios Sociales']; ?></p> 
+                                </div>
+                            </div>
+                            <div class="teacher-card" data-aos="fade-up">
+                            <img src="Imagenes/Rosalia.jpg" alt="Docente de Ciencias Naturales">
+                                <div>
+                                <h3><?= $docente['Rosalia']; ?></h3>
+                                <p><strong>Nombre:</strong> Licda. Rosalia Margarita Cantos Mora </p>
+                                <p><strong>Título:</strong> Licenciada en Ciencias de la Educación <?= $docente['Licenciada']; ?></p>
+                                <p><strong>Carga Horaria:</strong>Ciencias Naturales <?= $docente['Ciencias Naturales']; ?></p> 
+                                </div>
+                            </div> 
+                            <div class="teacher-card" data-aos="fade-up">
+                            <img src="Imagenes/Yolanda.jpg" alt="Docente de Lengua y Literatura">
+                                <div>
+                                <h3><?= $docente['Yolanda']; ?></h3>
+                                <p><strong>Nombre:</strong> Licda. Yolanda Edita Morán Llerena </p>
+                                <p><strong>Título:</strong> Máestria en Educación Básica <?= $docente['Máster']; ?></p>
+                                <p><strong>Carga Horaria:</strong>Lengua y Literatura-Orientación Vocacional <?= $docente['Lengua y Literatura']; ?></p> 
+                                </div>
+                            </div>
+                            <div class="teacher-card" data-aos="fade-up">
+                                <img src="Imagenes/Anita Solis.jpg" alt="Docente de Lengua y Literatura">
+                                    <div>
+                                    <h3><?= $docente['Anita']; ?></h3>
+                                    <p><strong>Nombre:</strong> Licda. Anita Alexandra Solis Ramirez </p>
+                                    <p><strong>Título:</strong> Licenciada en Ciencias de la Comunicación Social<?= $docente['Licenciada']; ?></p>
+                                    <p><strong>Carga Horaria:</strong>Lengua y Literatura <?= $docente['Matemáticas']; ?></p> 
+                                    </div>
+                                </div> 
+                                <div class="teacher-card" data-aos="fade-up">
+                                    <img src="Imagenes/Cecilia.jpg" alt="Docente de Lengua y Literatura">
+                                        <div>
+                                        <h3><?= $docente['Cecilia del Rocio Mejia Bastidas']; ?></h3>
+                                        <p><strong>Nombre:</strong> Licda. Yolanda Edita Morán Llerena </p>
+                                        <p><strong>Título:</strong> Licenciadaen Ciencias de la Educación <?= $docente['Matemáticas']; ?></p>
+                                        <p><strong>Carga Horaria:</strong>Matemáticas <?= $docente['Lengua y Literatura']; ?></p> 
+                                        </div>
+                                    </div>
+                                    <div class="teacher-card" data-aos="fade-up">
+                                        <img src="imagenes/Narcisa.jpg" alt="Docente de ">
+                                            <div>
+                                            <h3><?= $docente['Narcisa']; ?></h3>
+                                            <p><strong>Nombre:</strong> Licda. Narcisa Carolina Izquierdo </p>
+                                            <p><strong>Título:</strong> Magister en Gestión Educativa<?= $docente['Magíster']; ?></p>
+                                            <p><strong>Carga Horaria:</strong> <?= $docente['Ciencias Naturales']; ?></p> 
+                                            </div>
+                                        </div>
+                                        <div class="teacher-card" data-aos="fade-up">
+                                            <img src="Imagenes/Adriana.jpg" alt="Docente de Inglés">
+                                                <div>
+                                                <h3><?= $docente['Adriana']; ?></h3>
+                                                <p><strong>Nombre:</strong> Licda. Adriana Velasquez </p>
+                                                <p><strong>Título:</strong> Licenciada en Ciencias de la Educación <?= $docente['Máster']; ?></p>
+                                                <p><strong>Carga Horaria:</strong>Inglés<?= $docente['Lengua y Literatura']; ?></p> 
+                                                </div>
+                                            </div>
+                                            <div class="teacher-card" data-aos="fade-up">
+                                            <img src="Imagenes/Martha R.jpeg" alt="Docente de Inglés">
+                                                <div>
+                                                <h3><?= $docente['Martha']; ?></h3>
+                                                <p><strong>Nombre:</strong> Licda. Martha Narcisa Robles Pulecio </p>
+                                                <p><strong>Título:</strong> Licenciada en Ciencias de la Educación <?= $docente['Máster']; ?></p>
+                                                <p><strong>Carga Horaria:</strong>Inglés<?= $docente['Lengua y Literatura']; ?></p> 
+                                                </div>
+                                            </div> 
+
+                
+                            <script>
+                                AOS.init({
+                                    duration: 1000,
+                                    easing: 'ease', 
+                                    offset: 120,    
+                                    once: true      
+                                });
+                            </script>
+
+        <footer>
+        <p>&copy; 2024 Dr. Paul Ponce Rivadeneira. Todos los derechos reservados.</p>
+    </footer>
+</body>
+</html>
+

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carga Horaria</title>
+    <style>
+        body {
+            font-family: 'Times New Roman', Times, serif;
+            margin: 0; /* Elimina el margen por defecto */
+            padding: 0;
+            background-color: white; 
+        }
+        header {
+            background-color: #264727; /* Color de fondo para el encabezado */
+            color: white;
+            text-align: center;
+            padding: 20px 0; /* Espaciado superior e inferior */
+            margin: 0; /* Elimina el margen */
+        }
+        h1 {
+            font-size: 36px; /* Aumenta el tamaño del título */
+            margin: 0; /* Elimina el margen alrededor del título */
+        }
+        .back-button {
+            position: fixed; /* Lo hace flotante */
+            top: 15px;
+            left: 40px;
+            background-color: #3b9948;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 20px;
+            font-size: 14px;
+            cursor: pointer;
+            text-transform: uppercase;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            transition: background-color 0.3s, transform 0.2s;
+            opacity: 0.8;
+        }
+        .back-button:hover {
+            background-color: #76b57e;
+            transform: scale(1.1);
+            opacity: 1;
+        }
+        /* Estilo para la imagen */
+        .image {
+            width: 100%; /* La imagen se ajusta al ancho de la página */
+            max-width: 600px; /* Limita el tamaño máximo de la imagen */
+            height: auto; /* Mantiene la proporción de la imagen */
+            display: block; /* Asegura que la imagen se muestre correctamente */
+            margin-top: 20px; /* Espaciado superior */
+        }
+        .btn {
+            display: inline-block;
+            padding: 12px 30px;
+            font-size: 1.2em;
+            background-color: #4caf50;
+            color: white;
+            border-radius: 50px;
+            text-decoration: none;
+            margin-top: 30px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: background-color 0.3s ease;
+        }
+        
+        .back-button {
+            position: fixed;
+            top: 15px;
+            left: 15px;
+            background-color: #85c68e;
+            color: white;
+            padding: 5px 12px;
+            border: none;
+            border-radius: 12px;
+            font-size: 10px;
+            cursor: pointer;
+            text-transform: uppercase;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            transition: background-color 0.3s, transform 0.2s;
+            opacity: 0.8;
+        }
+
+        .back-button:hover {
+            background-color: #76b57e;
+            transform: scale(1.1);
+            opacity: 1;
+        }
+
+        .btn:hover {
+            background-color: #45a049;
+        }
+
+        footer p {
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <button class="back-button" onclick="window.location.href='inicio.html'">Regresar</button>
+        <h1>Malla Curricular</h1>
+    </header>
+
+    <!-- Imagen malla.jpg -->
+    <center><img src="imagenes/malla.jpeg"> </center>
+</body>
+</html>
