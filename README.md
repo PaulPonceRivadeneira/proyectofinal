@@ -1,2 +1,2 @@
 # proyectofinal
-Proyecto final de 3ro B de infformatica
+Proyecto final de 3ro c de infformatica
